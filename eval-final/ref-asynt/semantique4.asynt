@@ -1,0 +1,24 @@
+<prog>
+  <l_dec>
+    <foncDec>
+      main
+      <l_instr>
+        <instr_affect>
+          <var_simple>$a</var_simple>
+          <intExp>1</intExp>
+        </instr_affect>
+      </l_instr>
+    </foncDec>
+    <l_dec>
+      <foncDec>
+        main
+        <l_instr>
+          <instr_affect>
+            <var_simple>$a</var_simple>
+            <intExp>1</intExp>
+          </instr_affect>
+        </l_instr>
+      </foncDec>
+    </l_dec>
+  </l_dec>
+</prog>

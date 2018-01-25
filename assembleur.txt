@@ -1,0 +1,81 @@
+%include		'io.asm'
+
+section	.bss
+sinput:	resb	255
+$tab	resw	40
+
+section	.text
+global _start
+_start:
+		call	main
+		mov	eax, 1
+		int	0x80
+main:
+		push	ebp
+		mov		ebp, esp
+		sub		esp, 8	;variables locales
+		push	0;constante
+		pop		eax
+		mov		[ebp - 4], eax
+		mov		eax, [ebp - 4]
+inst2:
+		mov		eax, [ebp - 4]
+		push	eax
+		push	10;constante
+		pop		ebx
+		pop		eax
+		cmp		eax, ebx
+		jl		inst0
+		jmp		inst1
+inst0:
+		mov		eax, [ebp - 4]
+		push	eax
+		push	0;constante
+		pop		eax
+		mov		[$tab], eax;affectVar
+		mov		eax, [$tab];affectVar
+		push	0;constante
+		pop		eax
+		mov		[ebp - 8], eax
+		mov		eax, [ebp - 8]
+inst2:
+		mov		eax, [ebp - 8]
+		push	eax
+		mov		eax, [ebp - 4]
+		push	eax
+		pop		ebx
+		pop		eax
+		cmp		eax, ebx
+		jl		inst0
+		jmp		inst1
+inst0:
+		mov		eax, [ebp - 4]
+		push	eax
+		mov		eax, [$tab];traitement exp
+		push	eax
+		pop eax
+		add eax, 1
+		mov		[$tab], eax
+		mov		eax, [ebp - 8]
+		push	eax
+		pop eax
+		add eax, 1
+		mov		[ebp - 8], eax
+		jmp		inst2
+inst1:
+		mov		eax, [ebp - 4]
+		push	eax
+		mov		eax, [$tab];traitement exp
+		push	eax
+		pop		eax
+		call	iprintLF
+		mov		eax, [ebp - 4]
+		push	eax
+		pop eax
+		add eax, 1
+		mov		[ebp - 4], eax
+		jmp		inst2
+inst1:
+		add		esp, 8	;desalloue variables locales
+		pop	ebp
+		ret

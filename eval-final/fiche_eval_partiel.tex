@@ -1,0 +1,131 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{fancyheadings}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage[top=2cm]{geometry}
+%\usepackage{fguill}
+\usepackage{tipa}
+\newcommand{\gui}[1]{\og{#1}\fg}
+\newcommand{\ouf}{\vspace{3mm}}
+
+\newcounter{serie} \setcounter{serie}1
+\newcounter{numexo}
+\newcommand{\exonum}{Q.\theserie.\addtocounter{numexo}{1}\thenumexo.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Evaluation du compilateur 2016/2017} 
+\author{}
+\date{}
+%\date{4 janvier 2009}
+
+\begin{document}
+\setlength{\parindent}{0cm}
+
+% \maketitle
+
+\lhead{\emph{Université Aix Marseille - L3 Informatique}}
+\rhead{\emph{Compilation}}
+%\setlength{\headrulewidth}{0.25pt} 
+\thispagestyle{fancy}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+ \textbf{\Large{ Evaluation du compilateur 2016/2017}}
+\end{center}
+
+
+NOM~:~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~PRENOM~:\\
+NOM~:~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~PRENOM~:\\
+
+
+%Le sujet de l'évaluation se trouve à l'adresse suivante~:\\
+%{\tt http://pageperso.lif.univ-mrs.fr/\~{}alexis.nasr/Ens/Compilation/eval\_2012.html}\\
+
+
+\subsection*{0 Compilation de l'analyseur}
+
+\begin{tabular}{|l|l|} \hline
+Module & ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Remarques~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\\ \hline
+Table des symboles & \\ 
+&\\
+&\\
+& \\\hline
+Génération de code & \\ 
+&\\
+&\\
+& \\\hline
+\end{tabular}
+
+\subsection*{1 Exécution sur des exemples existants}
+
+\begin{tabular}{|p{2.7cm}|l|l|} \hline
+source       &génération & exécution \\ \hline
+{\tt affect.l} &~~~~~~~~~~~~~~~~      &~~~~~~~~~~~~~~~~         \\ \hline
+{\tt boucle.l} &      &         \\ \hline
+{\tt expression.l} &      &         \\ \hline
+{\tt max.l} &      &         \\ \hline
+{\tt tri.l} &      &         \\ \hline 
+\end{tabular}
+
+\subsection*{2 Exécution sur de nouveaux exemples}
+
+\subsubsection*{2.1 Exemples corrects}
+
+\begin{tabular}{|p{3.7cm}|l|l|} \hline
+source       &génération & exécution \\ \hline
+{\tt procedure\_arg.l} &~~~~~~~~~~~~~~~~ &~~~~~~~~~~~~~~~~        \\ \hline
+{\tt procedure.l} &            &         \\ \hline
+{\tt procedure\_retour.l}       &      &         \\ \hline
+{\tt procedure\_varloc.l}       &      &         \\ \hline
+{\tt fibo.l} &            &         \\ \hline
+{\tt associativite.l} &            &         \\ \hline
+{\tt pgcd.l} &      &               \\ \hline
+{\tt condexp.l} &      &               \\ \hline
+{\tt imbrique.l} &      &               \\ \hline
+\end{tabular}
+
+%\begin{tabular}{|l|l|l|} \hline
+%fichier de test & compilation & exécution \\ \hline
+%{\tt eval4.l} &     &      &         &     &     \\ \hline
+%{\tt eval5.l} &     &      &         &     &     \\ \hline
+%{\tt eval6.l} &     &      &         &     &     \\ \hline
+%\end{tabular}
+
+\subsubsection*{2.1 Exemples incorrects}
+
+\begin{tabular}{|p{3.4cm}|l|} \hline
+source       & génération \\ \hline
+{\tt semantique1.l} &~~~~~~~~~~~~~~~~  \\ \hline
+{\tt semantique2.l} &~~~~~~~~~~~~~~~~  \\ \hline
+{\tt semantique3.l} &~~~~~~~~~~~~~~~~  \\ \hline
+{\tt semantique4.l} &~~~~~~~~~~~~~~~~  \\ \hline
+{\tt semantique5.l} &~~~~~~~~~~~~~~~~  \\ \hline
+{\tt semantique6.l} &~~~~~~~~~~~~~~~~  \\ \hline
+\end{tabular}
+
+%\section{Ajout du type {\tt reel}}
+\subsection*{3.1 Implémentation de l'instruction {\tt incr}}
+
+\begin{tabular}{|p{3cm}|p{12cm}|} \hline
+& \\
+programmation & \\ 
+& \\\hline
+& \\
+compilation & \\ 
+& \\\hline
+\end{tabular}
+
+\subsection*{4 Tests}
+
+\begin{tabular}{|p{3.4cm}|l|l|l|l|} \hline
+source       & 1 & 2 & 3 & 4 \\ \hline
+{\tt incr1.l} &~~~~~~~~~~~~~~~~ &~~~~~~~~~~~~~~~~      &~~~~~~~~~~~~~~~~  &~~~~~~~~~~~~~~~~         \\ \hline
+{\tt incr2.l} &~~~~~~~~~~~~~~~~ &~~~~~~~~~~~~~~~~      &~~~~~~~~~~~~~~~~  &~~~~~~~~~~~~~~~~         \\ \hline
+\end{tabular}
+
+
+\end{document}

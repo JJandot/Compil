@@ -1,0 +1,20 @@
+<prog>
+  <l_dec>
+    <varDec>$a</varDec>
+  </l_dec>
+  <l_dec>
+    <foncDec>
+      main
+      <l_instr>
+        <instr_ecrire>
+          <varExp>
+            <var_indicee>
+              <var_base_tableau>$a</var_base_tableau>
+              <intExp>1</intExp>
+            </var_indicee>
+          </varExp>
+        </instr_ecrire>
+      </l_instr>
+    </foncDec>
+  </l_dec>
+</prog>
